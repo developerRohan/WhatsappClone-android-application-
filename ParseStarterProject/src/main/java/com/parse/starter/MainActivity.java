@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         changesignupmodeTextView = (TextView) findViewById(R.id.changesignupmodeTextView);
         changesignupmodeTextView.setOnClickListener(this);
 
+        redirectIfLoggedIn();
+
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }
 

@@ -35,9 +35,9 @@ public class UserListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext() , ChatActivity.class);
                 intent.putExtra("username" , usernames.get(i));
+                startActivity(intent);
             }
         });
-        usernames.clear();
         arrayAdapter = new ArrayAdapter<String>(this , android.R.layout.simple_dropdown_item_1line , usernames);
 
 
@@ -53,6 +53,7 @@ public class UserListActivity extends AppCompatActivity {
                         for(ParseUser user : objects ){
                             usernames.add(user.getUsername());
                         }
+                        userListView.setAdapter(arrayAdapter);
                         arrayAdapter.notifyDataSetChanged();
                     }else{
                         e.printStackTrace();
