@@ -772,6 +772,10 @@
         "source": "/Users/robpercival/Desktop/Instagram/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/layout/abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "/home/hi/Downloads/whatsapp/instagram/ParseStarterProject/build/intermediates/res/merged/debug/layout/activity_user_list.xml",
+        "source": "/home/hi/Downloads/whatsapp/instagram/ParseStarterProject/src/main/res/layout/activity_user_list.xml"
+    },
+    {
         "merged": "/Users/robpercival/Desktop/Instagram/ParseStarterProject/build/intermediates/res/merged/debug/layout/abc_action_bar_up_container.xml",
         "source": "/Users/robpercival/Desktop/Instagram/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/layout/abc_action_bar_up_container.xml"
     },
@@ -1014,6 +1018,10 @@
     {
         "merged": "/Users/robpercival/Desktop/Parse-Server-Starter-Project/ParseStarterProject/build/intermediates/res/merged/debug/layout/select_dialog_multichoice_material.xml",
         "source": "/Users/robpercival/Desktop/Parse-Server-Starter-Project/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/layout/select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "/home/hi/Downloads/whatsapp/instagram/ParseStarterProject/build/intermediates/res/merged/debug/layout/activity_chat.xml",
+        "source": "/home/hi/Downloads/whatsapp/instagram/ParseStarterProject/src/main/res/layout/activity_chat.xml"
     },
     {
         "merged": "/Users/robpercival/Downloads/Parse-Starter-Project-1.13.0/ParseStarterProject/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",

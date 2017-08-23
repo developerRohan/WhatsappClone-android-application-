@@ -8,6 +8,7 @@
  */
 package com.parse.starter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -30,6 +31,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView changesignupmodeTextView ;
     EditText usernameEditText ;
     EditText passwordEditText ;
+
+    public void redirectIfLoggedIn(){
+        Intent intent = new Intent(getApplicationContext() , UserListActivity.class);
+        startActivity(intent);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,25 +64,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     user.signUpInBackground(new SignUpCallback() {
                         @Override
                         public void done(ParseException e) {
-                            if(e == null){
+
                                 Toast.makeText(MainActivity.this, "Sign up successfully", Toast.LENGTH_SHORT).show();
-                            }else{
-                                Toast.makeText(MainActivity.this, "error" + e, Toast.LENGTH_SHORT).show();
-                                Log.e("error" , "error" + e);
+                                redirectIfLoggedIn();
                             }
-                        }
+
                     });
                 }else{
                     ParseUser.logInInBackground(usernameEditText.getText().toString(), passwordEditText.getText().toString(), new LogInCallback() {
                         @Override
                         public void done(ParseUser user, ParseException e) {
-                            if (e == null) {
+
                                 Toast.makeText(MainActivity.this, "log in successsful", Toast.LENGTH_SHORT).show();
-                            } else {
-
-                                Toast.makeText(MainActivity.this, "log in error" + e, Toast.LENGTH_SHORT).show();
-
-                            }
+                                redirectIfLoggedIn();
                         }
                     });
                 }
